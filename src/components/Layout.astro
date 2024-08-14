@@ -1,7 +1,13 @@
 ---
+import Footer from './Footer.astro';
+import logo from '../images/logo.svg';
+
 export interface Props {
   title: string;
 }
+
+// Explizite Extraktion der Bild-URL
+const logoSrc = logo.src;
 
 const { title } = Astro.props as Props;
 ---
@@ -15,7 +21,9 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body>
+    <div class="logoWrapper"><img alt="logo" class="logo" src={logoSrc} /></div>
     <slot />
+    <Footer />
   </body>
 </html>
 

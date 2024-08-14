@@ -1,22 +1,18 @@
 ---
 import Layout from '../components/Layout.astro';
-import logo from '../images/logo.svg';
 import pdfFile from '../images/Preisliste-2024.pdf';
 import '../styles/style.css';
 
-// Explizite Extraktion der Bild-URL
-const logoSrc = logo.src;
 ---
 
 <Layout title="Ornella estetica">
   <div>
-    <img alt="logo" class="logo" src={logoSrc} />
     <div>
       <h1 class="spaceTop">
         Ästhetik & Wohlbefinden
       </h1>
       <p>
-        Dein Kosmetikstudio in Hannover. Dich erwartet kompetente Hautberatung, entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut. Ich freue mich auf deinen Besuch!
+        Dein Kosmetikstudio in Hannover. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut. Ich freue mich auf Deinen Besuch!
       </p>
     </div>
     <div>
@@ -38,7 +34,7 @@ const logoSrc = logo.src;
       </p>
     </div>
     <div>
-      <h2>
+      <h2 class="spaceTop">
         Preisliste
       </h2>
       <p>
@@ -48,5 +44,9 @@ const logoSrc = logo.src;
         Preisliste herunterladen
       </a>
     </div>
+    <div class="instagram">
+      <a href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Besuche mich auf Instagram! →</a>
+    </div>
+    
   </div>
 </Layout>
