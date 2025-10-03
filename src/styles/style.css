@@ -66,6 +66,7 @@
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --color-bg: #d6e4d5;
+  --color-border: #c9dac8;
   --font-sans: Satoshi-Variable, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: Satoshi-Variable, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -83,7 +84,7 @@
   --space-4: 24px;
   --space-5: 32px;
   --space-6: 64px;
-  --size-content: 36rem;
+  --size-content: 800px;
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
 }
@@ -185,7 +186,6 @@ hr {
   box-sizing: inherit;
 }
 hgroup,
-img,
 figure,
 fieldset,
 ul,
@@ -291,6 +291,8 @@ pre tt:after {
   content: none;
 }
 
+/* Logo */
+
 .logoWrapper {
   width: 100%;
   display: flex;
@@ -300,7 +302,132 @@ pre tt:after {
 
 .logo {
   width: 200px;
-  margin-top: var(--space-6);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.logo-image-wrapper {
+  width: 100%;
+  margin: 24px auto;
+  display: block;
+}
+
+.logo-image-wrapper img {
+  border-radius: 0.5rem;
+}
+
+/* Über mich */
+
+.about-section {
+  margin: 3rem 0 2rem 0;
+}
+
+.about-box {
+  border: 1.5px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem 1.4rem;
+  margin: 0 auto;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.about-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.about-image {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.about-image img {
+  max-width: 160px;
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: contain;
+  display: block;
+}
+
+/* Responsive für schmale Bildschirme */
+@media (max-width: 680px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .about-image {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  .about-image img {
+    max-width: 220px;
+  }
+}
+
+.about-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.about-box p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+
+.about-box strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Mein Ansatz */
+
+.approach-section {
+  padding: 2rem 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.approach-card {
+  border: solid #c9dac8 1px;
+  border-radius: 18px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  text-align: left;
+}
+
+.approach-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.approach-card h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+}
+
+.approach-card p {
+  margin-top: 0.5rem;
+  color: #374350;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .footer {

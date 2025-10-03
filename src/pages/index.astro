@@ -1,20 +1,98 @@
 ---
 import Layout from '../components/Layout.astro';
 import pdfFile from '../images/Preisliste-2025.pdf';
+import headerImg from '../images/woman_mask_cosmetic.png';
+const headerImgSrc = headerImg.src;
+
 import '../styles/style.css';
+
+
 
 ---
 
 <Layout title="Ornella estetica">
   <div>
+
+    <div class="logo-image-wrapper">
+      <img src={headerImgSrc} alt="Kosmetikstudio Ornella" />
+    </div>
+
     <div>
       <h1 class="spaceTop">
-        Ästhetik & Wohlbefinden
+        Ganzheitliche Hautgesundheit & dermatologisch-ästhetische Kosmetik
       </h1>
       <p>
         Dein Kosmetikstudio in Hannover. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut. Ich freue mich auf Deinen Besuch!
       </p>
     </div>
+
+    <div class="about-section">
+      <div class="about-box about-flex">
+        <div class="about-text">
+          <h2>Mehr als 30 Jahre Erfahrung – ein Ziel: Ihre Hautgesundheit.</h2>
+          <p>
+            Mit Leidenschaft und einem feinen Gespür für individuelle Bedürfnisse begleite ich seit über drei Jahrzehnten Menschen auf ihrem Weg zu <strong>gesunder, strahlender Haut</strong>.
+          </p>
+          <p>
+            Für mich bedeutet ganzheitliche Kosmetik weit mehr als Pflege: Es ist die Verbindung von <strong>Hautgesundheit, innerem Gleichgewicht und nachhaltigem Wohlbefinden</strong>.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src={headerImgSrc} alt="Ornella Galati" />
+        </div>
+      </div>
+    </div>
+
+    <div class="approach-section">
+      <h2 class="spaceTop">Mein Ansatz</h2>
+      <div class="feature-grid">
+        <div class="approach-card">
+          <span class="approach-icon">🌿</span>
+          <h3>Ganzheitlich & individuell</h3>
+          <p>
+            Jede Haut ist einzigartig. Deshalb entwickeln wir gemeinsam ein maßgeschneidertes Konzept, das optimal auf Sie abgestimmt ist – von gezielten Wirkstoffbehandlungen bis hin zu regenerierenden Hautkuren.
+          </p>
+        </div>
+        <div class="approach-card">
+          <span class="approach-icon">🧬</span>
+          <h3>Wissen & Technologie</h3>
+          <p>
+            Ich kombiniere modernste dermatologische Gerätetechnologie mit fundierter kosmetischer Expertise. So entstehen sichtbare, langfristige Ergebnisse, die weit über den oberflächlichen Effekt hinausgehen.
+          </p>
+        </div>
+        <div class="approach-card">
+          <span class="approach-icon">🌱</span>
+          <h3>Heilpraktisches Know-how</h3>
+          <p>
+            Dank meiner vierjährigen Ausbildung in der Heilpraxis fließen Erkenntnisse aus Naturheilkunde, Ernährung und Lebensstil ein. Ihr Hautbild wird nicht nur von außen, sondern auch von innen gestärkt.
+          </p>
+        </div>
+        <div class="approach-card">
+          <span class="approach-icon">📚</span>
+          <h3>Kontinuierliche Weiterbildung</h3>
+          <p>
+            Mein Anspruch ist es, immer auf dem neuesten Stand der Forschung zu sein. So profitieren Sie von hochwirksamen, zugleich schonenden und medizinisch fundierten Behandlungsmethoden.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div>
+      <h2 class="spaceTop">Was Sie bei mir erwartet</h2>
+      <ul>
+        <li>Individuelle Hautanalyse – präzise, tiefgehend, wissenschaftlich fundiert</li>
+        <li>Effektive Behandlungskonzepte – abgestimmt auf Hautzustand & Lebensstil</li>
+        <li>Langfristige Hautgesundheit – statt kurzfristiger Trends</li>
+        <li>Persönliche Betreuung in entspannter, exklusiver Atmosphäre</li>
+      </ul>
+      <p>
+        Ich bin überzeugt: Wahre Schönheit entsteht, wenn Fachwissen, Leidenschaft und Achtsamkeit aufeinandertreffen.
+      </p>
+    </div>
+    <!-- ...danach wie gehabt: Anschrift, Preisliste, Instagram ... -->
+
+
     <div>
       <h2 class="spaceTop">
         Anschrift & Kontakt
@@ -33,6 +111,7 @@ import '../styles/style.css';
         </a>
       </p>
     </div>
+
     <div>
       <h2 class="spaceTop">
         Preisliste
@@ -44,6 +123,7 @@ import '../styles/style.css';
         Preisliste herunterladen
       </a>
     </div>
+
     <div class="instagram">
       <a href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Besuche mich auf Instagram! →</a>
     </div>
