@@ -107,8 +107,8 @@ body {
   font-weight: normal;
   margin: 0 auto;
   word-wrap: break-word;
-  max-width: var(--size-content);
-  padding: 2rem;
+  max-width: 100%;
+  padding: 0;
 
 }
 a {
@@ -291,6 +291,13 @@ pre tt:after {
   content: none;
 }
 
+/* Base Layout - Content Wrapper */
+.content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Für mobile Abstände */
+}
+
 /* Logo */
 
 .logoWrapper {
@@ -316,7 +323,24 @@ pre tt:after {
   border-radius: 0.5rem;
 }
 
+/* Hero */
+
+.hero-section {
+  width: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  /* oder background-image: url('../images/hero-bg.jpg'); */
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
 /* Über mich */
+
+.about-bg {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
 
 .about-section {
   margin: 3rem 0 2rem 0;
@@ -390,6 +414,15 @@ pre tt:after {
 
 /* Mein Ansatz */
 
+.approach-bg {
+  width: 100%;
+  background-color: #f8f9fa;
+  /* oder background-image: url('../images/approach-bg.jpg'); */
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 0;
+}
+
 .approach-section {
   padding: 2rem 0;
 }
@@ -430,9 +463,296 @@ pre tt:after {
   margin-bottom: 0;
 }
 
+/* Was Sie bei mir erwartet */
+
+.expectations-bg {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.expectations-section {
+  margin: 3rem 0 2rem 0;
+}
+
+.expectations-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.expectations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 650px;
+}
+
+.expectations-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.expectation-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.philosophy-quote {
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  border-top: 2px solid var(--color-border);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.philosophy-quote p {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-primary);
+  margin: 0;
+  font-style: italic;
+}
+
+.philosophy-quote strong {
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .expectations-list {
+    padding: 0 1rem;
+  }
+  
+  .philosophy-quote {
+    padding: 1.2rem 1rem;
+  }
+  
+  .philosophy-quote p {
+    font-size: 1rem;
+  }
+}
+
+/* Anschrift & Kontakt */
+
+.contact-bg {
+  width: 100%;
+  background-color: #f1f3f4;
+  padding: 4rem 0;
+}
+
+.contact-section {
+  margin: 3rem 0 2rem 0;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.contact-info {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.contact-details {
+  flex: 1;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: opacity 0.2s ease;
+}
+
+.contact-link:hover {
+  opacity: 0.8;
+}
+
+.contact-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  opacity: 0.8;
+}
+
+.contact-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .contact-info {
+    padding: 0 1rem;
+  }
+  
+  .contact-item {
+    gap: 0.8rem;
+  }
+  
+  .contact-value {
+    font-size: 1rem;
+  }
+}
+
+/* Preisliste */
+
+.pricing-social-bg {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 0;
+}
+
+.pricing-section {
+  margin: 3rem 0 2rem 0;
+}
+
+.pricing-section h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.pricing-content {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pricing-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.download-wrapper {
+  margin-top: 1.5rem;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 1.8rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.download-btn:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.download-icon {
+  font-size: 1.2rem;
+}
+
+/* Instagram / Social */
+
+.social-section {
+  margin: 4rem 0 3rem 0;
+}
+
+.instagram-wrapper {
+  text-align: center;
+}
+
+.instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.instagram-btn:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.instagram-icon {
+  font-size: 1.2rem;
+}
+
+.instagram-arrow {
+  font-size: 1rem;
+  margin-left: 0.2rem;
+}
+
+/* Responsive */
+@media (max-width: 680px) {
+  .pricing-content {
+    padding: 0 1rem;
+  }
+  
+  .download-btn,
+  .instagram-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+/* Footer */
+
 .footer {
+  width: 100%;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 100%;
+}
+
+.footer-content {
   display: flex;
   justify-content: space-between;
 }

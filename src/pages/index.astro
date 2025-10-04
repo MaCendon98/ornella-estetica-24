@@ -3,6 +3,8 @@ import Layout from '../components/Layout.astro';
 import pdfFile from '../images/Preisliste-2025.pdf';
 import headerImg from '../images/woman_mask_cosmetic.png';
 const headerImgSrc = headerImg.src;
+import portraitImg from '../images/portrait.png';
+const portraitImgSrc = portraitImg.src;
 
 import '../styles/style.css';
 
@@ -13,120 +15,177 @@ import '../styles/style.css';
 <Layout title="Ornella estetica">
   <div>
 
-    <div class="logo-image-wrapper">
-      <img src={headerImgSrc} alt="Kosmetikstudio Ornella" />
-    </div>
-
-    <div>
-      <h1 class="spaceTop">
-        Ganzheitliche Hautgesundheit & dermatologisch-ästhetische Kosmetik
-      </h1>
-      <p>
-        Dein Kosmetikstudio in Hannover. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut. Ich freue mich auf Deinen Besuch!
-      </p>
-    </div>
-
-    <div class="about-section">
-      <div class="about-box about-flex">
-        <div class="about-text">
-          <h2>Mehr als 30 Jahre Erfahrung – ein Ziel: Ihre Hautgesundheit.</h2>
-          <p>
-            Mit Leidenschaft und einem feinen Gespür für individuelle Bedürfnisse begleite ich seit über drei Jahrzehnten Menschen auf ihrem Weg zu <strong>gesunder, strahlender Haut</strong>.
-          </p>
-          <p>
-            Für mich bedeutet ganzheitliche Kosmetik weit mehr als Pflege: Es ist die Verbindung von <strong>Hautgesundheit, innerem Gleichgewicht und nachhaltigem Wohlbefinden</strong>.
-          </p>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="content-wrapper">
+        <div class="logo-image-wrapper">
+          <img src={headerImgSrc} alt="Kosmetikstudio Ornella" />
         </div>
-        <div class="about-image">
-          <img src={headerImgSrc} alt="Ornella Galati" />
+        <h1 class="spaceTop">Ganzheitliche Hautgesundheit & dermatologisch-ästhetische Kosmetik</h1>
+        <p>
+          Dein Kosmetikstudio in Hannover. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut. Ich freue mich auf Deinen Besuch!
+        </p>
+      </div>
+    </section>
+
+    <!-- Über mich -->
+    <section class="about-bg">
+      <div class="content-wrapper">
+        <div class="about-section">
+          <div class="about-box about-flex">
+            <div class="about-text">
+              <h2>Mehr als 30 Jahre Erfahrung – ein Ziel: Ihre Hautgesundheit.</h2>
+              <p>
+                Mit Leidenschaft und einem feinen Gespür für individuelle Bedürfnisse begleite ich seit über drei Jahrzehnten Menschen auf ihrem Weg zu <strong>gesunder, strahlender Haut</strong>.
+              </p>
+              <p>
+                Für mich bedeutet ganzheitliche Kosmetik weit mehr als Pflege: Es ist die Verbindung von <strong>Hautgesundheit, innerem Gleichgewicht und nachhaltigem Wohlbefinden</strong>.
+              </p>
+            </div>
+            <div class="about-image">
+              <img src={portraitImgSrc} alt="Ornella Galati" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="approach-section">
-      <h2 class="spaceTop">Mein Ansatz</h2>
-      <div class="feature-grid">
-        <div class="approach-card">
-          <span class="approach-icon">🌿</span>
-          <h3>Ganzheitlich & individuell</h3>
-          <p>
-            Jede Haut ist einzigartig. Deshalb entwickeln wir gemeinsam ein maßgeschneidertes Konzept, das optimal auf Sie abgestimmt ist – von gezielten Wirkstoffbehandlungen bis hin zu regenerierenden Hautkuren.
-          </p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-icon">🧬</span>
-          <h3>Wissen & Technologie</h3>
-          <p>
-            Ich kombiniere modernste dermatologische Gerätetechnologie mit fundierter kosmetischer Expertise. So entstehen sichtbare, langfristige Ergebnisse, die weit über den oberflächlichen Effekt hinausgehen.
-          </p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-icon">🌱</span>
-          <h3>Heilpraktisches Know-how</h3>
-          <p>
-            Dank meiner vierjährigen Ausbildung in der Heilpraxis fließen Erkenntnisse aus Naturheilkunde, Ernährung und Lebensstil ein. Ihr Hautbild wird nicht nur von außen, sondern auch von innen gestärkt.
-          </p>
-        </div>
-        <div class="approach-card">
-          <span class="approach-icon">📚</span>
-          <h3>Kontinuierliche Weiterbildung</h3>
-          <p>
-            Mein Anspruch ist es, immer auf dem neuesten Stand der Forschung zu sein. So profitieren Sie von hochwirksamen, zugleich schonenden und medizinisch fundierten Behandlungsmethoden.
-          </p>
+    <!-- Ansatz Section -->
+    <section class="approach-bg">
+      <div class="content-wrapper">
+        <div class="approach-section">
+          <h2 class="spaceTop">Mein Ansatz</h2>
+            <div class="feature-grid">
+              <div class="approach-card">
+                <span class="approach-icon">🌿</span>
+                <h3>Ganzheitlich & individuell</h3>
+                <p>
+                  Jede Haut ist einzigartig. Deshalb entwickeln wir gemeinsam ein maßgeschneidertes Konzept, das optimal auf Sie abgestimmt ist – von gezielten Wirkstoffbehandlungen bis hin zu regenerierenden Hautkuren.
+                </p>
+              </div>
+              <div class="approach-card">
+                <span class="approach-icon">🧬</span>
+                <h3>Wissen & Technologie</h3>
+                <p>
+                  Ich kombiniere modernste dermatologische Gerätetechnologie mit fundierter kosmetischer Expertise. So entstehen sichtbare, langfristige Ergebnisse, die weit über den oberflächlichen Effekt hinausgehen.
+                </p>
+              </div>
+              <div class="approach-card">
+                <span class="approach-icon">🌱</span>
+                <h3>Heilpraktisches Know-how</h3>
+                <p>
+                  Dank meiner vierjährigen Ausbildung in der Heilpraxis fließen Erkenntnisse aus Naturheilkunde, Ernährung und Lebensstil ein. Ihr Hautbild wird nicht nur von außen, sondern auch von innen gestärkt.
+                </p>
+              </div>
+              <div class="approach-card">
+                <span class="approach-icon">📚</span>
+                <h3>Kontinuierliche Weiterbildung</h3>
+                <p>
+                  Mein Anspruch ist es, immer auf dem neuesten Stand der Forschung zu sein. So profitieren Sie von hochwirksamen, zugleich schonenden und medizinisch fundierten Behandlungsmethoden.
+                </p>
+              </div>
+            </div>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- Expectations Section -->
+    <section class="expectations-bg">
+      <div class="content-wrapper">
+        <div class="expectations-section">
+          <h2 class="spaceTop">Was Sie bei mir erwartet</h2>
+          <ul class="expectations-list">
+            <li>
+              <span class="expectation-text">Individuelle Hautanalyse – präzise, tiefgehend, wissenschaftlich fundiert</span>
+            </li>
+            <li>
+              <span class="expectation-text">Effektive Behandlungskonzepte – abgestimmt auf Hautzustand & Lebensstil</span>
+            </li>
+            <li>
+              <span class="expectation-text">Langfristige Hautgesundheit – statt kurzfristiger Trends</span>
+            </li>
+            <li>
+              <span class="expectation-text">Persönliche Betreuung in entspannter, exklusiver Atmosphäre</span>
+            </li>
+          </ul>
+          <div class="philosophy-quote">
+            <p>
+              Ich bin überzeugt: <strong>Wahre Schönheit entsteht, wenn Fachwissen, Leidenschaft und Achtsamkeit aufeinandertreffen.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div>
-      <h2 class="spaceTop">Was Sie bei mir erwartet</h2>
-      <ul>
-        <li>Individuelle Hautanalyse – präzise, tiefgehend, wissenschaftlich fundiert</li>
-        <li>Effektive Behandlungskonzepte – abgestimmt auf Hautzustand & Lebensstil</li>
-        <li>Langfristige Hautgesundheit – statt kurzfristiger Trends</li>
-        <li>Persönliche Betreuung in entspannter, exklusiver Atmosphäre</li>
-      </ul>
-      <p>
-        Ich bin überzeugt: Wahre Schönheit entsteht, wenn Fachwissen, Leidenschaft und Achtsamkeit aufeinandertreffen.
-      </p>
-    </div>
-    <!-- ...danach wie gehabt: Anschrift, Preisliste, Instagram ... -->
+    <!-- Kontakt Section -->
+    <section class="contact-bg">
+      <div class="content-wrapper">
+        <div class="contact-section">
+          <h2 class="spaceTop">Anschrift & Kontakt</h2>
+          <div class="contact-info">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div class="contact-details">
+                <a href="https://g.page/bellissima-cosmetics?share" target="_blank" class="contact-link">
+                  <span class="contact-label">Adresse</span>
+                  <span class="contact-value">Große Pfahlstraße 17 · 30161 Hannover</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div class="contact-details">
+                <a href="tel:+491724336545" class="contact-link">
+                  <span class="contact-label">Telefon</span>
+                  <span class="contact-value">0172 433 65 45</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div class="contact-details">
+                <a href="mailto:ornellagalati@web.de" class="contact-link">
+                  <span class="contact-label">E-Mail</span>
+                  <span class="contact-value">ornellagalati@web.de</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Preisliste & Social Section -->
+    <section class="pricing-social-bg">
+      <div class="content-wrapper">
+        <div class="pricing-section">
+          <h2 class="spaceTop">Preisliste</h2>
+          <div class="pricing-content">
+            <p class="pricing-description">
+              Zu meinem Repertoire gehören verschönernde Kosmetik und Verwöhnbehandlungen, die dich und deine Haut zum Strahlen bringen. Schau jetzt in die Preisliste!
+            </p>
+            <div class="download-wrapper">
+              <a href={pdfFile} download="Preisliste-Ornella-estetica.pdf" class="download-btn">
+                <span class="download-icon">📄</span>
+                <span class="download-text">Preisliste herunterladen</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="social-section">
+          <div class="instagram-wrapper">
+            <a href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram-btn">
+              <span class="instagram-icon">📸</span>
+              <span class="instagram-text">Besuche mich auf Instagram!</span>
+              <span class="instagram-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div>
-      <h2 class="spaceTop">
-        Anschrift & Kontakt
-      </h2>
-      <p>
-        <a href="https://g.page/bellissima-cosmetics?share" target="_blank">
-          Große Pfahlstraße 17 &middot; 30161 Hannover
-        </a>
-        <br />
-        <a href="tel:+491724336545" target="_blank">
-          0172 433 65 45
-        </a>
-        <br />
-        <a href="mailto:ornellagalati@web.de" target="_blank">
-          ornellagalati@web.de
-        </a>
-      </p>
-    </div>
-
-    <div>
-      <h2 class="spaceTop">
-        Preisliste
-      </h2>
-      <p>
-        Zu meinem Repertoire gehören verschönernde Kosmetik und Verwöhnbehandlungen, die dich und deine Haut zum Strahlen bringen. Schau jetzt in die Preisliste!
-      </p>
-      <a href={pdfFile} download="Preisliste-Ornella-estetica.pdf">
-        Preisliste herunterladen
-      </a>
-    </div>
-
-    <div class="instagram">
-      <a href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Besuche mich auf Instagram! →</a>
-    </div>
     
   </div>
 </Layout>
