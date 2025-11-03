@@ -21,7 +21,26 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
   </head>
   <body>
-    <div class="logoWrapper"><img alt="logo" class="logo" src={logoSrc} /></div>
+    <!-- <div class="logoWrapper"><img alt="logo" class="logo" src={logoSrc} /></div> -->
+    <header class="site-header">
+      <nav class="nav-bar">
+        <div class="nav-logo">
+          <a href="/">
+            <img alt="Ornella estetica Logo" class="logo" src={logoSrc} />
+          </a>
+        </div>
+        <div class="nav-actions">
+          <a href="https://www.instagram.com/ornella__estetica/" target="_blank" class="nav-btn instagram-btn" aria-label="Instagram">
+            <!-- Unicode Icon, du kannst auch SVG nehmen -->
+            <span class="nav-icon" aria-hidden="true">📸</span>
+          </a>
+          <a href="#kontakt" class="nav-btn book-btn">
+            Termin vereinbaren
+          </a>
+        </div>
+      </nav>
+    </header>
+
     <slot />
     <Footer />
   </body>

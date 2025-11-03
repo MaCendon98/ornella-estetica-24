@@ -298,7 +298,83 @@ pre tt:after {
   padding: 0 2rem; /* Für mobile Abstände */
 }
 
-/* Logo */
+/* Navigation */
+
+.site-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border, #ececec);
+  padding: 0.5rem 0;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 60px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.52rem 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  background: transparent;
+  color: var(--color-primary, #2f4456);
+  border: 1px solid var(--color-border, #ececec);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.nav-btn:hover {
+  border-color: var(--color-primary, #2f4456);
+  background: #f5f7fa;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .nav-bar {
+    padding: 0 0.7rem;
+    height: auto;
+  }
+  .nav-actions {
+    gap: 0.3rem;
+  }
+  .nav-btn, .logo-img {
+    font-size: 0.98rem;
+    height: 34px;
+    padding: 0.44rem 0.7rem;
+  }
+}
+
 
 .logoWrapper {
   width: 100%;
