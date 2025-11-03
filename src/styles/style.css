@@ -65,7 +65,7 @@
   --color-primary: #000000;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
-  --color-bg: #d6e4d5;
+  --color-bg: #F7F5EB;
   --color-border: #c9dac8;
   --font-sans: Satoshi-Variable, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -83,7 +83,9 @@
   --space-3: 16px;
   --space-4: 24px;
   --space-5: 32px;
-  --space-6: 64px;
+  --space-6: 40px;
+  --space-7: 80px;
+  --space-8: 120px;
   --size-content: 800px;
   --size-gutter: var(--space-5);
   --size-gap: var(--space-6);
@@ -302,19 +304,15 @@ pre tt:after {
 
 .site-header {
   width: 100%;
-  background: #fff;
-  border-bottom: 1px solid var(--color-border, #ececec);
-  padding: 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 850px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  height: 60px;
 }
 
 .nav-logo {
@@ -334,24 +332,23 @@ pre tt:after {
   gap: 1rem;
 }
 
-.nav-btn {
+.btn {
   display: flex;
   align-items: center;
   gap: 0.35rem;
   padding: 0.52rem 1.1rem;
-  border-radius: 8px;
+  border-radius: 40px;
   text-decoration: none;
-  background: transparent;
-  color: var(--color-primary, #2f4456);
-  border: 1px solid var(--color-border, #ececec);
+  background: var(--color-primary);
+  color: white;
   font-size: 1rem;
   font-weight: 500;
-  transition: background 0.15s, border-color 0.15s;
 }
 
-.nav-btn:hover {
-  border-color: var(--color-primary, #2f4456);
-  background: #f5f7fa;
+.btn-outlined {
+  background: white;
+  color: var(--color-primary);
+  border: solid 1px var(--color-primary);
 }
 
 .nav-icon {
@@ -375,47 +372,125 @@ pre tt:after {
   }
 }
 
-
-.logoWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-
 .logo {
-  width: 200px;
-  margin-top: var(--space-4);
-  margin-bottom: var(--space-3);
-}
-
-.logo-image-wrapper {
-  width: 100%;
-  margin: 24px auto;
-  display: block;
-}
-
-.logo-image-wrapper img {
-  border-radius: 0.5rem;
+  height: 48px;
+  margin-top: var(--space-5);
 }
 
 /* Hero */
 
+/* HERO SECTION */
+
 .hero-section {
-  width: 100%;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  /* oder background-image: url('../images/hero-bg.jpg'); */
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 0;
+  width: 100vw;
+  background: #f6f5f2;
+  position: relative;
+  overflow: hidden;
 }
+
+.hero-bg {
+  width: 100%;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.hero-left,
+.hero-right {
+  width: 50%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.hero-left {
+  background: #fff;
+  border-radius: 0 400px 400px 0;
+  box-shadow: none;
+  padding: var(--space-7);
+  margin: var(--space-5) 0;
+}
+
+.hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 1.13;
+  margin-bottom: 2.1rem;
+  color: #161718;
+}
+
+.hero-desc {
+  font-size: 1.14rem;
+  line-height: 1.6;
+  color: #212324;
+  margin-bottom: 1rem;
+}
+
+/* .hero-img {
+  max-width: 430px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} */
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-bg,
+  .hero-wrapper {
+    flex-direction: column;
+    padding: 2.5rem 1rem;
+    min-height: unset;
+  }
+  .hero-left {
+    border-radius: 24px;
+    padding: 2rem 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero-right {
+    min-width: 220px;
+  }
+  .hero-img {
+    max-width: 320px;
+    border-radius: 36px;
+  }
+  .hero-title {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 1.53rem;
+  }
+  .hero-img {
+    max-width: 190px;
+    border-radius: 22px;
+  }
+}
+
 
 /* Über mich */
 
 .about-bg {
   width: 100%;
-  background-color: #ffffff;
   padding: 4rem 0;
+  background-color: #ffffff;
 }
 
 .about-section {
@@ -492,7 +567,6 @@ pre tt:after {
 
 .approach-bg {
   width: 100%;
-  background-color: #f8f9fa;
   /* oder background-image: url('../images/approach-bg.jpg'); */
   background-size: cover;
   background-position: center;
@@ -543,7 +617,6 @@ pre tt:after {
 
 .expectations-bg {
   width: 100%;
-  background-color: #ffffff;
   padding: 4rem 0;
 }
 
@@ -622,7 +695,6 @@ pre tt:after {
 
 .contact-bg {
   width: 100%;
-  background-color: #f1f3f4;
   padding: 4rem 0;
 }
 
@@ -705,7 +777,6 @@ pre tt:after {
 
 .pricing-social-bg {
   width: 100%;
-  background-color: #ffffff;
   padding: 4rem 0;
 }
 

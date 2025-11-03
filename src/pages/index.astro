@@ -1,7 +1,7 @@
 ---
 import Layout from '../components/Layout.astro';
 import pdfFile from '../images/Preisliste-2025.pdf';
-import headerImg from '../images/woman_mask_cosmetic.png';
+import headerImg from '../images/hero_image.jpg';
 const headerImgSrc = headerImg.src;
 import portraitImg from '../images/portrait.png';
 const portraitImgSrc = portraitImg.src;
@@ -16,7 +16,7 @@ import '../styles/style.css';
   <div>
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- <section class="hero-section">
       <div class="content-wrapper">
         <div class="logo-image-wrapper">
           <img src={headerImgSrc} alt="Kosmetikstudio Ornella" />
@@ -26,7 +26,31 @@ import '../styles/style.css';
           Dein Kosmetikstudio in Hannover. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut. Ich freue mich auf Deinen Besuch!
         </p>
       </div>
+    </section> -->
+
+    <section class="hero-section">
+      <div class="hero-bg">
+        <div class="hero-wrapper">
+          <div class="hero-left">
+            <h1 class="hero-title">
+              Ganzheitliche<br />
+              Hautgesundheit<br />
+              &amp; Anti Aging
+            </h1>
+            <p class="hero-desc">
+              Dein Kosmetikstudio in Hannover List. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut.
+            </p>
+            <p class="hero-desc">
+              Ich freue mich auf Deinen Besuch!
+            </p>
+          </div>
+          <div class="hero-right">
+            <img src={headerImgSrc} alt="Frau Kosmetikstudio" class="hero-img" />
+          </div>
+        </div>
+      </div>
     </section>
+
 
     <!-- Über mich -->
     <section class="about-bg">
