@@ -5,6 +5,14 @@ import headerImg from '../images/hero_image.jpg';
 const headerImgSrc = headerImg.src;
 import portraitImg from '../images/portrait.jpg';
 const portraitImgSrc = portraitImg.src;
+// import dermatudeImg from '../images/dermatude-logo.png';
+// const dermatudeImgSrc = dermatudeImg.src;
+import checkIcon from '../images/check.svg';
+const checkIconSrc = checkIcon.src;
+import instagramIcon from '../images/instagram.svg';
+const instagramIconSrc = instagramIcon.src;
+import beautyIcon from '../images/icon-placeholder.png';
+const beautyIconSrc = beautyIcon.src;
 
 import '../styles/style.css';
 
@@ -54,8 +62,7 @@ import '../styles/style.css';
       <div class="about-hero__container">
         <div class="about-hero__text">
           <h2>
-            Ornella Galati Rando — Mehr als<br />
-            30 Jahre Erfahrung
+            Ornella Galati Rando — Mehr als 30 Jahre Erfahrung
           </h2>
           <p>
             Mit Leidenschaft und einem feinen Gespür für individuelle Bedürfnisse begleite ich seit über drei Jahrzehnten Menschen auf ihrem Weg zu gesunder, strahlender Haut.
@@ -65,12 +72,7 @@ import '../styles/style.css';
           </p>
           <a class="btn btn-outlined" href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
             <span class="about-hero__ig-icon" aria-hidden="true">
-              <!-- SVG: Instagram minimal icon (ersetzbar) -->
-              <svg width="25" height="25" fill="none" viewBox="0 0 32 32">
-                <rect width="20" height="20" x="6" y="6" stroke="currentColor" stroke-width="2.2" rx="6"/>
-                ircle cx="16" cy="16" r="4.65" stroke="currentColor" strokeke-width="2.2"/>
-                ircle cx="21.5" cy="10.5" r="1.25" fillll="currentColor"/>
-              </svg>
+              <img src={instagramIconSrc} alt="instagram-icon">
             </span>
             Zu meinem Instagram Kanal
           </a>
@@ -85,28 +87,28 @@ import '../styles/style.css';
       </div>
       <div class="approach-grid">
         <div class="approach-item">
-          <img src="../images/icon1.svg" alt="" class="approach-icon" />
+          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Ganzheitlich & individuell</h3>
           <p>
             Jede Haut ist einzigartig. Deshalb entwickeln wir gemeinsam ein maßgeschneidertes Konzept, das optimal auf Sie abgestimmt ist — von gezielten Wirkstoffbehandlungen bis hin zu regenerierenden Hautkuren.
           </p>
         </div>
         <div class="approach-item">
-          <img src="../images/icon2.svg" alt="" class="approach-icon" />
+          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Wissen & Technologie</h3>
           <p>
             Ich kombiniere modernste dermatologische Gerätetechnologie mit fundierter kosmetischer Expertise. So entstehen sichtbare, langfristige Ergebnisse, die weit über den oberflächlichen Effekt hinausgehen.
           </p>
         </div>
         <div class="approach-item">
-          <img src="../images/icon3.svg" alt="" class="approach-icon" />
+          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Heilpraktisches Know-how</h3>
           <p>
             Dank meiner vierjährigen Ausbildung in der Heilpraxis fließen Erkenntnisse aus Naturheilkunde, Ernährung und Lebensstil ein. Ihr Hautbild wird nicht nur von außen, sondern auch von innen gestärkt.
           </p>
         </div>
         <div class="approach-item">
-          <img src="../images/icon4.svg" alt="" class="approach-icon" />
+          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Kontinuierliche Weiterbildung</h3>
           <p>
             Mein Anspruch ist es, immer auf dem neuesten Stand der Forschung zu sein. So profitieren Sie von hochwirksamen, zugleich schonenden und medizinisch fundierten Behandlungsmethoden.
@@ -121,10 +123,10 @@ import '../styles/style.css';
     <!-- Behandlungen Section -->
      <section class="treatments-section">
 
+      <div class="treatments-spez">Meine Spezialisierung</div>
       <div class="treatments-row">
         <div class="treatments-left">
-          <div class="treatments-spez">Meine Spezialisierung</div>
-          <h2>Dermatude Meta Therapy<sup>®</sup></h2>
+          <h2 class="treatments-headline">Dermatude Meta Therapy<sup>®</sup></h2>
           <p>
             Unterstützung der Hautfunktion, Optimierung der Hautstruktur und Rückgewinnung jugendlicher Frische — für alle Hauttypen geeignet.
           </p>
@@ -133,22 +135,22 @@ import '../styles/style.css';
           </p>
         </div>
         <div class="treatments-right">
-          <img class="treatments-logo" src="../images/dermatude-logo.svg" alt="Dermatude Logo" />
+          <!-- <img class="treatments-logo" src={dermatudeImgSrc} alt="Dermatude Logo" /> -->
           <ul class="treatments-bullets">
             <li>
-              <span class="treatments-check">✓</span>
+              <span class="treatments-check"><img src={checkIconSrc} alt="Checkmark"></span>
               <span>Für alle Hauttypen</span>
             </li>
             <li>
-              <span class="treatments-check">✓</span>
+              <span class="treatments-check"><img src={checkIconSrc} alt="Checkmark"></span>
               <span>Anti Aging</span>
             </li>
             <li>
-              <span class="treatments-check">✓</span>
+              <span class="treatments-check"><img src={checkIconSrc} alt="Checkmark"></span>
               <span>Feuchtigkeitsversorgung &amp; Regeneration</span>
             </li>
             <li>
-              <span class="treatments-check">✓</span>
+              <span class="treatments-check"><img src={checkIconSrc} alt="Checkmark"></span>
               <span>Medizinisch-ästhetisches Hautkonzept</span>
             </li>
           </ul>
@@ -177,7 +179,7 @@ import '../styles/style.css';
         </div>
         <div class="treatments-pricelist">
           <a class="btn btn-outlined" href="#preisliste">
-            Preisliste <span class="treatments-price-arrow">↓</span>
+            Preisliste anschauen
           </a>
         </div>
       </div>
@@ -192,10 +194,6 @@ import '../styles/style.css';
           <div class="cta-footer-actions">
             <a href="#kontaktformular" class="btn">Termin vereinbaren</a>
             <a href="https://maps.google.com/?q=Hohenzollernstr.+55,+30161+Hannover" target="_blank" class="btn btn-outlined">
-              <span class="cta-btn-icon">
-                <!-- SVG Kamera/Ort (optional) -->
-                <svg aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l-4-4-4 4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
-              </span>
               Google Maps
             </a>
           </div>
@@ -205,8 +203,8 @@ import '../styles/style.css';
             Hohenzollernstr. 55, 30161 Hannover
           </div>
           <footer class="cta-footer-meta">
-            <a href="#impressum">Impressum</a>
-            <span>© 2025 ornella estetica</span>
+            <a href="/impressum">Impressum</a>
+            <span>&copy; {new Date().getFullYear()} ornella estetica</span>
           </footer>
         </div>
       </div>
