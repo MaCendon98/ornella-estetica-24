@@ -1,10 +1,12 @@
 ---
 import Layout from '../components/Layout.astro';
 import pdfFile from '../images/Preisliste-2025.pdf';
-import headerImg from '../images/hero_image.jpg';
+import headerImg from '../images/hero-image.jpg';
 const headerImgSrc = headerImg.src;
 import portraitImg from '../images/portrait.jpg';
 const portraitImgSrc = portraitImg.src;
+import roundedSection from '../images/roundedsection.svg';
+const roundedSectionSrc = roundedSection.src;
 // import dermatudeImg from '../images/dermatude-logo.png';
 // const dermatudeImgSrc = dermatudeImg.src;
 import checkIcon from '../images/check.svg';
@@ -23,38 +25,46 @@ import '../styles/style.css';
 <Layout title="Ornella estetica">
   <div>
 
-    <section class="hero-section">
-      <div class="hero-bg">
-        <div class="hero-wrapper">
-          <div class="hero-left">
-            <h1 class="hero-title">
-              Ganzheitliche<br />
-              Hautgesundheit<br />
-              &amp; Anti Aging
-            </h1>
-            <p class="hero-desc">
-              Dein Kosmetikstudio in Hannover List. Hier erwarten dich kompetente Hautberatung, ein entspanntes Ambiente und individuell abgestimmte Behandlungen für eine strahlend schöne Haut.
-            </p>
-            <p class="hero-desc">
-              Ich freue mich auf Deinen Besuch!
-            </p>
-          </div>
-          <div class="hero-right">
-            <img src={headerImgSrc} alt="Frau Kosmetikstudio" class="hero-img" />
-          </div>
-        </div>
+  <section class="hero">
+    <div class="hero-inner">
+
+      <img
+        src={headerImgSrc}
+        alt="Ornella Galati"
+        class="hero-image"
+      />
+
+      <img
+        src={roundedSectionSrc}
+        alt="Ornella Galati"
+        class="hero-roundedsection"
+      />
+
+      <div class="hero-textblock">
+        <h1>Ganzheitliche Hautgesundheit & Anti Aging</h1>
+        <p>
+          Deine Kosmetikerin in Hannover List. Mit Leidenschaft und einem feinen Gespür für individuelle Bedürfnisse begleite ich seit über drei Jahrzehnten Menschen auf ihrem Weg zu gesunder, strahlender Haut.
+        </p>
+        <p>
+          Für mich bedeutet ganzheitliche Kosmetik weit mehr als Pflege: Es ist die Verbindung von Hautgesundheit, innerem Gleichgewicht und nachhaltigem Wohlbefinden.
+        </p>
+        <p>Ich freue mich auf dich!</p>
+
+        <a href="#kontaktformular" class="btn">Termin vereinbaren</a>
       </div>
-    </section>
+    </div>
+  </section>
+
 
 
     <!-- Zitat -->
-    <section class="citation-bg">
+    <!-- <section class="citation-bg">
       <div class="content-wrapper">
         <div class="citation-text">
           <h3>Skin is the mirror of your health</h3>
         </div>
       </div>
-    </section>
+    </section> -->
 
 
     <!-- Über mich -->
@@ -62,20 +72,14 @@ import '../styles/style.css';
       <div class="about-hero__container">
         <div class="about-hero__text">
           <h2>
-            Ornella Galati Rando — Mehr als 30 Jahre Erfahrung
+            Das sind meine Prinzipien
           </h2>
-          <p>
+          <!-- <p>
             Mit Leidenschaft und einem feinen Gespür für individuelle Bedürfnisse begleite ich seit über drei Jahrzehnten Menschen auf ihrem Weg zu gesunder, strahlender Haut.
           </p>
           <p>
             Für mich bedeutet ganzheitliche Kosmetik weit mehr als Pflege: Es ist die Verbindung von Hautgesundheit, innerem Gleichgewicht und nachhaltigem Wohlbefinden.
           </p>
-          <a class="btn btn-outlined" href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
-            <span class="about-hero__ig-icon" aria-hidden="true">
-              <img src={instagramIconSrc} alt="instagram-icon">
-            </span>
-            Zu meinem Instagram Kanal
-          </a>
         </div>
         <div class="about-hero__image-wrap">
           <img
@@ -83,42 +87,57 @@ import '../styles/style.css';
             alt="Ornella Galati"
             class="about-hero__image"
           />
-        </div>
+        </div> -->
       </div>
       <div class="approach-grid">
         <div class="approach-item">
           <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Ganzheitlich & individuell</h3>
           <p>
-            Jede Haut ist einzigartig. Deshalb entwickeln wir gemeinsam ein maßgeschneidertes Konzept, das optimal auf Sie abgestimmt ist — von gezielten Wirkstoffbehandlungen bis hin zu regenerierenden Hautkuren.
+            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
           </p>
         </div>
         <div class="approach-item">
           <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Wissen & Technologie</h3>
           <p>
-            Ich kombiniere modernste dermatologische Gerätetechnologie mit fundierter kosmetischer Expertise. So entstehen sichtbare, langfristige Ergebnisse, die weit über den oberflächlichen Effekt hinausgehen.
+            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
           </p>
         </div>
         <div class="approach-item">
           <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Heilpraktisches Know-how</h3>
           <p>
-            Dank meiner vierjährigen Ausbildung in der Heilpraxis fließen Erkenntnisse aus Naturheilkunde, Ernährung und Lebensstil ein. Ihr Hautbild wird nicht nur von außen, sondern auch von innen gestärkt.
+            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
           </p>
         </div>
         <div class="approach-item">
           <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Kontinuierliche Weiterbildung</h3>
           <p>
-            Mein Anspruch ist es, immer auf dem neuesten Stand der Forschung zu sein. So profitieren Sie von hochwirksamen, zugleich schonenden und medizinisch fundierten Behandlungsmethoden.
+            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
           </p>
         </div>
       </div>
-      
-      <hr class="separator" />
+
+        <a class="btn btn-outlined" href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+          <span class="about-hero__ig-icon" aria-hidden="true">
+            <img src={instagramIconSrc} alt="instagram-icon">
+          </span>
+          Zu meinem Instagram Kanal
+        </a>
+    
+      <!-- <hr class="separator" /> -->
 
     </section>
+
+    <div class="fullwidth_container">
+      <img
+        src={portraitImgSrc}
+        alt="Ornella Galati"
+        class="fullwidth_container-image"
+      />
+    </div>
 
     <!-- Behandlungen Section -->
      <section class="treatments-section">
@@ -185,6 +204,14 @@ import '../styles/style.css';
       </div>
 
     </section>
+
+    <!-- <div class="fullwidth_container">
+      <img
+        src={portraitImgSrc}
+        alt="Ornella Galati"
+        class="fullwidth_container-image"
+      />
+    </div> -->
 
     <!-- Footer -->
     <section class="cta-footer">

@@ -19,7 +19,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "astro": "^5.16.4",
+    "astro": "^5.16.11",
     "cypress": "^15.3.0"
   }
 }
