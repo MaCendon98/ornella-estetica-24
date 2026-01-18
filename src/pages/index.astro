@@ -3,18 +3,28 @@ import Layout from '../components/Layout.astro';
 import pdfFile from '../images/Preisliste-2025.pdf';
 import headerImg from '../images/hero-image.jpg';
 const headerImgSrc = headerImg.src;
+import headerDesktopImg from '../images/hero-image-desktop.jpg';
+const headerDesktopImgSrc = headerDesktopImg.src;
 import portraitImg from '../images/portrait.jpg';
 const portraitImgSrc = portraitImg.src;
 import roundedSection from '../images/roundedsection.svg';
 const roundedSectionSrc = roundedSection.src;
-// import dermatudeImg from '../images/dermatude-logo.png';
-// const dermatudeImgSrc = dermatudeImg.src;
 import checkIcon from '../images/check.svg';
 const checkIconSrc = checkIcon.src;
 import instagramIcon from '../images/instagram.svg';
 const instagramIconSrc = instagramIcon.src;
-import beautyIcon from '../images/icon-placeholder.png';
+
+import beautyIcon from '../images/beauty.png';
 const beautyIconSrc = beautyIcon.src;
+import bookIcon from '../images/book.png';
+const bookIconSrc = bookIcon.src;
+import plantIcon from '../images/plant.png';
+const plantIconSrc = plantIcon.src;
+import lampIcon from '../images/lamp.png';
+const lampIconSrc = lampIcon.src;
+
+
+import pricelist from '../images/Preisliste-2025.pdf';
 
 import '../styles/style.css';
 
@@ -35,6 +45,12 @@ import '../styles/style.css';
       />
 
       <img
+        src={headerDesktopImgSrc}
+        alt="Ornella Galati"
+        class="hero-image-desktop"
+      />
+
+      <img
         src={roundedSectionSrc}
         alt="Ornella Galati"
         class="hero-roundedsection"
@@ -50,7 +66,7 @@ import '../styles/style.css';
         </p>
         <p>Ich freue mich auf dich!</p>
 
-        <a href="#kontaktformular" class="btn">Termin vereinbaren</a>
+        <a href="https://wa.me/message/UQ47ZOU3Y5M5M1" target="_blank" class="btn" rel="noopener">Termin vereinbaren</a>
       </div>
     </div>
   </section>
@@ -98,29 +114,29 @@ import '../styles/style.css';
           </p>
         </div>
         <div class="approach-item">
-          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
+          <img src={lampIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Wissen & Technologie</h3>
           <p>
-            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
+            Moderne Gerätetechnologie mit kosmetischer Expertise für langfristige Ergebnisse.
           </p>
         </div>
         <div class="approach-item">
-          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
+          <img src={plantIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Heilpraktisches Know-how</h3>
           <p>
-            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
+            Naturheilkunde, Ernährung und Lebensstil stärken die Haut von innen und außen.
           </p>
         </div>
         <div class="approach-item">
-          <img src={beautyIconSrc} alt="beauty-icon" class="approach-icon" />
+          <img src={bookIconSrc} alt="beauty-icon" class="approach-icon" />
           <h3>Kontinuierliche Weiterbildung</h3>
           <p>
-            Maßgeschneiderte Hautkonzepte für individuelle Hautbedürfnisse.
+            Für hochwirksame, schonende und fundierte Behandlungen.
           </p>
         </div>
       </div>
 
-        <a class="btn btn-outlined" href="https://www.instagram.com/ornellaestetica_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">
+        <a class="btn btn-outlined" href="https://www.instagram.com/ornella__estetica/" target="_blank" rel="noopener">
           <span class="about-hero__ig-icon" aria-hidden="true">
             <img src={instagramIconSrc} alt="instagram-icon">
           </span>
@@ -181,23 +197,23 @@ import '../styles/style.css';
         <div class="treatments-more-list">
           <div class="treatments-more-item">
             <div class="treatments-more-headline">Aqua Derm</div>
-            <div class="treatments-more-text">Add a short paragraph. Double click to edit and add your own text.</div>
+            <div class="treatments-more-text">Sanfte, wasserbasierte Tiefenreinigung, die die Haut gleichzeitig klärt, exfoliert und intensiv mit Feuchtigkeit versorgt.</div>
           </div>
           <div class="treatments-more-item">
             <div class="treatments-more-headline">Hautanalyse Observ</div>
-            <div class="treatments-more-text">Add a short paragraph. Double click to edit and add your own text.</div>
+            <div class="treatments-more-text">Hochpräzise Hautanalyse mit spezieller Licht- und Kameratechnologie, die auch verborgene Hautzustände sichtbar macht.</div>
+          </div>
+          <div class="treatments-more-item">
+            <div class="treatments-more-headline">GLOW BIOPeelX Microneedling</div>
+            <div class="treatments-more-text">Natürliches Bio-Microneedling, das die Haut durch Mikrokanäle erneuert und für ein frisches, ebenmäßiges Hautbild sorgt.</div>
           </div>
           <div class="treatments-more-item">
             <div class="treatments-more-headline">Meso Needling</div>
-            <div class="treatments-more-text">Add a short paragraph. Double click to edit and add your own text.</div>
-          </div>
-          <div class="treatments-more-item">
-            <div class="treatments-more-headline">Meso Needling</div>
-            <div class="treatments-more-text">Add a short paragraph. Double click to edit and add your own text.</div>
+            <div class="treatments-more-text">Minimalinvasive Needling-Behandlung, die Kollagenbildung anregt und Wirkstoffe tief in die Haut einschleust.</div>
           </div>
         </div>
         <div class="treatments-pricelist">
-          <a class="btn btn-outlined" href="#preisliste">
+          <a class="btn btn-outlined" href={pricelist} target="_blank">
             Preisliste anschauen
           </a>
         </div>
@@ -219,7 +235,7 @@ import '../styles/style.css';
         <div class="cta-footer-inner">
           <h2>Jetzt Termin vereinbaren</h2>
           <div class="cta-footer-actions">
-            <a href="#kontaktformular" class="btn">Termin vereinbaren</a>
+            <a href="https://wa.me/message/UQ47ZOU3Y5M5M1" target="_blank" class="btn" rel="noopener">Termin vereinbaren</a>
             <a href="https://maps.google.com/?q=Hohenzollernstr.+55,+30161+Hannover" target="_blank" class="btn btn-outlined">
               Google Maps
             </a>
